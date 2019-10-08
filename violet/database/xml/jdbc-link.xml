@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<note xmlns="http://www.violet.com" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.violet.com jdbc-schema.xml">
+
+    <mysql id="mysql_masspoint" default="true" drive="com.mysql.cj.jdbc.Driver">
+        <url><![CDATA[jdbc:mysql://localhost:3306/east_masspoint?useSSL=false&serverTimezone=Asia/Shanghai]]></url>
+        <user><![CDATA[root]]></user>
+        <password><![CDATA[chenYun201]]></password>
+    </mysql>
+
+    <mysql id="mysql_disclosure" drive="com.mysql.cj.jdbc.Driver">
+        <url><![CDATA[jdbc:mysql://localhost:3306/east_disclosure?useSSL=false&serverTimezone=Asia/Shanghai]]></url>
+        <user><![CDATA[chenqingyun]]></user>
+        <password><![CDATA[chenYun201]]></password>
+    </mysql>
+
+    <!--  东老师提供的局域网 数据中心为 masspoint 项目提供股票相关数据  -->
+    <sqlserver id="lan_er_stock" drive="com.microsoft.sqlserver.jdbc.SQLServerDriver">
+        <url><![CDATA[jdbc:sqlserver://192.168.0.108;database=er_stock]]></url>
+        <user><![CDATA[er_data_read]]></user>
+        <password><![CDATA[u61ZfU3sd0Ap]]></password>
+    </sqlserver>
+
+</note>

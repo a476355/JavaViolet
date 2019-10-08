@@ -1,0 +1,36 @@
+
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.violet.com"
+           xmlns="http://www.violet.com"
+           elementFormDefault="qualified">
+
+    <xs:element name="note">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="mysql" minOccurs="0" type="personinfo" />
+                <xs:element name="sqlserver" type="personinfo" />
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="personinfo">
+        <xs:sequence>
+            <!-- 数据连接地址 通常情况下也会附带一些参数  -->
+            <xs:element name="url" type="xs:all" />
+
+            <!-- 账号 -->
+            <xs:element name="user" type="xs:string"/>
+
+            <!-- 密码 -->
+            <xs:element name="password" type="xs:string"/>
+
+            <!-- 可选-  -->
+            <xs:element name="library" type="xs:string"></xs:element>
+             
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="drive" type="xs:string"/>
+        <xs:attribute name="default" type="xs:boolean"/>
+    </xs:complexType>
+</xs:schema>
